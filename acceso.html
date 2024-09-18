@@ -14,7 +14,7 @@
                 <i class="fas fa-user-circle"></i>
             </div>
             <h1>Iniciar Sesión</h1>
-            <form action="#" method="post">
+            <form id="loginForm">
                 <div class="textbox">
                     <input type="text" placeholder="Usuario" name="username" required>
                 </div>
@@ -29,5 +29,12 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'dashboard.html'; // Redirige al dashboard
+        });
+    </script>
 </body>
 </html>
+
