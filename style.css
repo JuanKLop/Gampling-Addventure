@@ -159,6 +159,9 @@ main.shifted {
     display: block;
 }
 
+
+.users-controls{
+
 .roles-controls, .users-controls {
     display: flex;
     justify-content: space-between;
@@ -240,6 +243,168 @@ main.shifted {
     color: #666;
 }
 
+
+.UDDLT{
+    display: flex;
+    padding: 0 20px 20px;
+    
+}
+
+.bot2{
+    margin-left: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin-top: 10px;
+}
+
+.modal-content input, .modal-content select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1a4a5a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #1a4a5a;
+}
+
+.permission-item {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #1a4a5a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px; /* Ajusta según sea necesario */
+}
+
+.form-group {
+ 
+    flex: 1;
+    width: 200px; /* Ajusta según sea necesario */
+}
+
+
+
+
 .top-sections{
     top: 10px;
     display: flex;
@@ -279,3 +444,4 @@ main.shifted {
     left: 10px;
     
 }
+

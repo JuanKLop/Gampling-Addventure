@@ -34,6 +34,38 @@ document.addEventListener('click', (event) => {
     }
 });
 
+
+document.getElementById('createRoleForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // crear el rol
+    closeModal('createRoleModal');
+});
+
+
+// Búsqueda de roles
+document.getElementById('searchRoleInput').addEventListener('input', function() {
+    const searchQuery = this.value.toLowerCase();
+    const rows = document.querySelectorAll('#rolesTableBody tr');
+
+    rows.forEach(row => {
+        const roleName = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+        if (roleName.includes(searchQuery)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+});
+
+function openEditRoleModal(roleId) {
+    openModal('editRoleModal');
+}
+
+function openDeleteRoleModal(roleId) {
+    // guardar el roleId
+    openModal('deleteRoleModal');
+}
+
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function () {
     // Configuración del gráfico
@@ -190,4 +222,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
